@@ -1,0 +1,11 @@
+{
+  "name": "cross-domain",
+  "version": "0.0.1",
+  "description": "cross domain",
+  "main": "aa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xfan",
+  "license": "BSD-2-Clause"
+}

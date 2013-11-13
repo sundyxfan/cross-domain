@@ -1,0 +1,20 @@
+<!DOCTYPE html> 
+<html >
+ <head > 
+<meta content="text/html" http-equiv="content-type " charset="utf-8 "/>
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+	<span id="test">sdfds</span>
+</body>
+<script type="text/javascript">
+document.domain='first.com';
+
+console.log(window.parent);  //回去引入iframe所在的window对象  
+window.parent.document.getElementById("testMain").innerHTML='maindd';  //不同域之间互操作
+</script>
+</html>

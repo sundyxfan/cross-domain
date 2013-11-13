@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html >
+ <head > 
+<meta content="text/html" http-equiv="content-type " charset="utf-8 "/>
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+     <p id="aatest">localtionData</p>
+	<span id="testData"></span>
+	<span id="propyVal"></span>
+	<iframe src="http://first.com:9000/demoTest.html" style="width:400px;height:200px;" id="localtionPropy"></iframe>
+</body>
+<script type="text/javascript">
+document.getElementById('localtionPropy').contentWindow.document.getElementById('testDataA').innerHTML='sdfd';
+console.log(document.getElementById('localtionPropy').contentWindow.document.getElementById('testDataA'));
+
+</script>
+</html>

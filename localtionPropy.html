@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html >
+ <head > 
+<meta content="text/html" http-equiv="content-type " charset="utf-8 "/>
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+     <span id="propyt">localtionPropy</span>
+	<span id="testC"></span>
+</body>
+<script type="text/javascript">
+document.getElementById('testC').innerHTML=location.href;
+console.log(top.window); //是与代理页面同一个域的window
+top.window.document.getElementById('testA').innerHTML=location.href;
+
+
+//不同域之间是不会进行操作
+//console.log(window.parent.parent.document.getElementById('mainLocaltion'));  //与引入代理页面的window对象
+
+//var locationData=window.parent.parent.document.getElementById('mainLocaltion');
+//locationData.contentWindow.docuemt.getElementById("propyVal").innerHTML='propyVal';
+
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html >
+ <head > 
+<meta content="text/html" http-equiv="content-type " charset="utf-8 "/>
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+	<span id="test"></span>
+</body>
+<script type="text/javascript">
+var state=0;
+var iframe = document.createElement('iframe');
+
+//1 iframe.src = 'http://first.com:9000/data.html';
+iframe.src = 'http://second.first.com:9000/data.html';
+   
+ iframe.onload  = function(){
+	//2 console.log(iframe.contentWindow.name);  //window.name 实现同域之间
+	
+	
+	//不同域之间
+	 if (state === 1) {
+		 var data=iframe.contentWindow.name;
+		alert(data);    //弹出'I was there!'
+	} else if (state === 0) {
+		state = 1;
+		iframe.contentWindow.location = "http://first.com:9000/proxy.html";    // 设置的代理文件  不同域之间  window.name只限于同域之间
+	} 
+ };
+document.body.appendChild(iframe);
+console.log(iframe.contentWindow);
+window.name="sdfdsffdsfdsf";
+alert(window.name);
+
+//获取到需要的值后需要把iframe从页面中删除
+//iframe.contentWindow.close();
+//document.body.removeChild(iframe);
+</script>
+</html>

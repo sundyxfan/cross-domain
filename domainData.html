@@ -1,0 +1,31 @@
+<!DOCTYPE html> 
+<html >
+ <head > 
+<meta content="text/html" http-equiv="content-type " charset="utf-8 "/>
+<style type="text/css">
+
+</style>
+
+</head>
+<body>
+
+	<span id="testMain"></span>
+</body>
+<script type="text/javascript">
+document.domain='first.com';
+var iframe = document.createElement('iframe');
+iframe.src = 'http://second.first.com:9000/domain.html';
+   
+ iframe.onload  = function(){
+
+    var data=iframe.contentWindow.document.getElementById('test');;
+	data.innerHTML="sdfsdfsdfds";
+	
+ };
+document.body.appendChild(iframe);
+
+//获取到需要的值后需要把iframe从页面中删除
+//iframe.contentWindow.close();
+//document.body.removeChild(iframe);
+</script>
+</html>
